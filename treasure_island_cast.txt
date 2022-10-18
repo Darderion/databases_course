@@ -1,0 +1,25 @@
+
+create table treasure_island_cast(
+	name text unique,
+	afraidOf text references treasure_island_cast(name)
+);
+
+insert into treasure_island_cast values
+('Flint', 'Silver'),
+('Billy', 'Flint'),
+('Black Dog', 'Flint'),
+('Silver', null),
+('Smollett', null),
+('Trelawney', 'Silver'),
+('Jimmy', null);
+
+-----
+
+Description
+"Billy is a coward"
+"Black Dog is a coward"
+"Flint is strong"
+"Jimmy is a legend"
+"Silver is a legend"
+"Smollett is a legend"
+"Trelawney is a coward"
